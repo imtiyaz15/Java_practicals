@@ -1,5 +1,6 @@
 import java.security.Principal;
 import java.util.Scanner;
+import java.util.concurrent.CountedCompleter;
 
 public class BasicPrograms{
     public void fibonacci(int input){
@@ -46,6 +47,44 @@ public class BasicPrograms{
             System.out.println("\nNote: 1 and -ve cannot be a prime number");
         }
     }
+
+    public void generatePrimeNumber(int input){
+        //Generate Prime N number 
+        int n = 2, flag=0;
+        int count= input;
+        int counter=0;
+        System.out.println("<===First "+input+" Prime numbers generated===>");
+        while(n>0){
+
+            for(int j = 2; j<=n; j++){
+                if(n%j==0){
+                    flag=flag+1;
+                    if(flag>1){
+                        flag=0;
+                        break;
+                    }
+                }  
+                
+                
+            }
+            if(flag==1){
+                System.out.print(" "+n);
+                counter +=1;
+                flag=0;
+                
+                //System.out.println("counter: "+counter);
+                if(counter == count){
+                 break;
+                }
+            }
+            //System.out.println("N =: "+n+" K="+k);
+            ++n;
+
+        }
+            
+            
+    }
+    
     public static void main(String args[]){ 
         System.out.print("Provide your input her: ");
         Scanner scan = new Scanner(System.in);
@@ -54,6 +93,7 @@ public class BasicPrograms{
         scan.close();
         obj.fibonacci(input);
         obj.primeNumber(input);
+        obj.generatePrimeNumber(input);
 
     }
 }
