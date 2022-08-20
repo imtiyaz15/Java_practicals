@@ -71,13 +71,11 @@ public class BasicPrograms{
                 System.out.print(" "+n);
                 counter +=1;
                 flag=0;
-                
-                //System.out.println("counter: "+counter);
                 if(counter == count){
                  break;
                 }
             }
-            //System.out.println("N =: "+n+" K="+k);
+            
             ++n;
 
         }
