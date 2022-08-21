@@ -83,15 +83,28 @@ public class BasicPrograms{
             
     }
     
+    public void checkPalindrom(int input){
+        int temp=input,res=0,rem;
+        String palindrom;
+        while(input>0){
+            rem=input%10;
+            input=input/10;
+            res=res*10+rem;
+
+        }
+        palindrom=(temp==res)? "a Palindrom number" : "Not a Palindrom number";
+        System.out.println(temp+" is "+palindrom);
+    }
     public static void main(String args[]){ 
-        System.out.print("Provide your input her: ");
+        System.out.print("Provide your input here: ");
         Scanner scan = new Scanner(System.in);
         int input = scan.nextInt();
         BasicPrograms obj = new BasicPrograms();
+        //obj.fibonacci(input);
+        //obj.primeNumber(input);
+        //obj.generatePrimeNumber(input);
+        obj.checkPalindrom(input);
         scan.close();
-        obj.fibonacci(input);
-        obj.primeNumber(input);
-        obj.generatePrimeNumber(input);
 
     }
 }
