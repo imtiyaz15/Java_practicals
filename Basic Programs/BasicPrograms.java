@@ -1,6 +1,4 @@
-import java.security.Principal;
 import java.util.Scanner;
-import java.util.concurrent.CountedCompleter;
 
 public class BasicPrograms{
     public void fibonacci(int input){
@@ -92,18 +90,26 @@ public class BasicPrograms{
             res=res*10+rem;
 
         }
-        palindrom=(temp==res)? "a Palindrom number" : "Not a Palindrom number";
+        palindrom=(temp==res)? " a Palindrom number" : "Not a Palindrom number";
         System.out.println(temp+" is "+palindrom);
+    }
+    public void findFactorial(int input){
+        int fact=1;
+        for(int i =1; i<=input;i++){
+            fact *=i;
+        }
+        System.out.println(" Factoral of " + input +" "+fact);
     }
     public static void main(String args[]){ 
         System.out.print("Provide your input here: ");
         Scanner scan = new Scanner(System.in);
         int input = scan.nextInt();
         BasicPrograms obj = new BasicPrograms();
-        //obj.fibonacci(input);
-        //obj.primeNumber(input);
-        //obj.generatePrimeNumber(input);
+        obj.fibonacci(input);
+        obj.primeNumber(input);
+        obj.generatePrimeNumber(input);
         obj.checkPalindrom(input);
+        obj.findFactorial(input);
         scan.close();
 
     }
