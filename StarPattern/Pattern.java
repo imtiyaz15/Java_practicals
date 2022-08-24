@@ -94,6 +94,10 @@ public class Pattern{
         Pattern obj = new Pattern();
         //obj.pattern4();
         obj.pattern4Method2();
+        obj.pattern1();
+        obj.pattern2();
+        obj.pattern3();
+        obj.pattern4();
         
     }
 }
