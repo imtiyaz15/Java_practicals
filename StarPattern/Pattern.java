@@ -67,9 +67,33 @@ public class Pattern{
         }
        
     }
+    public void pattern4Method2(){
+        //                  *
+        //              *	*
+        //          *	*	*
+        //      *	*	*	*
+        //  *	*	*	*	*
+
+        // size of the triangle
+     
+    // loop to print the pattern
+    for ( i = 0; i < row; i++) {
+      // print spaces
+      for ( j = 1; j < row - i; j++) {
+        System.out.print(" "); //Remove space, you will get new shape
+      }
+      // print stars
+      for (int k = 0; k <= i; k++) {
+        System.out.print("*"); //add spca afer *, you will get new shape
+      }
+      System.out.println();
+    }
+       
+    }
     public static void main(String args[]){
         Pattern obj = new Pattern();
-        obj.pattern4();
+        //obj.pattern4();
+        obj.pattern4Method2();
         
     }
 }
