@@ -100,6 +100,17 @@ public class BasicPrograms{
         }
         System.out.println(" Factoral of " + input +" "+fact);
     }
+    public void checkAsrmstrong(int input){
+        int rem,temp=input,res=0;
+        String armStrong;
+        while(input>0){
+            rem = input%10;
+            res=res+rem*rem*rem;
+            input=input/10;
+        }
+        armStrong = (temp==res) ? " an Armstrong number " : " not an Armstrong number ";
+        System.out.println(temp+" "+armStrong);
+    }
     public static void main(String args[]){ 
         System.out.print("Provide your input here: ");
         Scanner scan = new Scanner(System.in);
@@ -110,6 +121,7 @@ public class BasicPrograms{
         obj.generatePrimeNumber(input);
         obj.checkPalindrom(input);
         obj.findFactorial(input);
+        obj.checkAsrmstrong(input);
         scan.close();
 
     }
